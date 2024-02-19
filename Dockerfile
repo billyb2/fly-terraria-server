@@ -15,6 +15,7 @@ RUN wget -O tshock.zip 'https://github.com/Pryaxis/TShock/releases/download/v5.2
 RUN unzip tshock.zip
 RUN tar xf TShock-Beta-linux-x64-Release.tar
 ADD start-server.sh start-server.sh
+ADD ./config.json /config.json
 ENTRYPOINT [ "sh","start-server.sh" ]
 
 
